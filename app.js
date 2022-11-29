@@ -7,9 +7,9 @@ conexion.once('open', ()=> console.log('Conexión exitosa a MongoDB'))
 conexion.on('error', ()=> console.log('El error de conexión es: '+error))
 
 //AdminBro
-const AdminBro = require('admin-bro')
-const expressAdminBro = require('@admin-bro/express')
-const mongooseAdminBro = require('@admin-bro/mongoose')
+// const AdminBro = require('admin-bro')
+// const expressAdminBro = require('@admin-bro/express')
+// const mongooseAdminBro = require('@admin-bro/mongoose')
 
 //Modelos
 // const User = require('./models/User')
