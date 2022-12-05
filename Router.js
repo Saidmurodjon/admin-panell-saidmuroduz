@@ -3,9 +3,11 @@ const router = express.Router();
 // const path=require('path')
 
 const admin = require("./admin/Admin");
-const user =require("./user/Router")
+const user = require("./user/Router");
+const projects = require("./projects/Router");
 // router
 
-router.use("/user", user);
 router.use("/admin", admin);
+router.use("/user", user);
+router.use("/projects", projects);
 module.exports = router;

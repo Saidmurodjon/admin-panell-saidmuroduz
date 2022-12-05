@@ -10,5 +10,5 @@ conexion.on("error", () => console.log("El error de conexión es: " + error));
 app.use("/", appRouter);
 
 app.listen(PORT, () => {
-  console.log("¡Server UP! en http://localhost:3000/admin");
+  console.log(`¡Server UP! en http://localhost:${PORT}/admin`);
 });

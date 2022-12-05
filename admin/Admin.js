@@ -24,15 +24,16 @@ const ADMIN = {
 // Modelos
 const User = require("../models/User");
 const Post = require("../models/Post");
+const Project = require("../models/Projects");
 
 AdminBro.registerAdapter(mongooseAdminBro);
-const AdminBroOptions = { resources: [User, Post] };
+const AdminBroOptions = { resources: [User, Post, Project] };
 
 const adminBro = new AdminBro(AdminBroOptions);
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
-  cookieName: process.env.ADMIN_COOKIE_NAME || "admin-bro",
+  cookieName: ADMIN_COOKIE_NAME || "admin-bro",
   cookiePassword:
-    process.env.ADMIN_COOKIE_PASS ||
+    ADMIN_COOKIE_PASS ||
     "supersecret-and-long-password-for-a-cookie-in-the-browser",
   authenticate: async (email, password) => {
     if (ADMIN_EMAIL === email && ADMIN_PASSWORD === password) {
