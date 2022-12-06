@@ -24,7 +24,6 @@ async function create(req, res) {
     return res.status(201).send(contact);
   } catch (err) {
     res.status(400).send(err);
-    console.log(err);
   }
 }
 module.exports = { get, create };

@@ -7,7 +7,7 @@ const cors = require('cors')
 conexion.once("open", () => console.log("Conexión exitosa a MongoDB"));
 conexion.on("error", () => console.log("El error de conexión es: " + error));
 
-
+app.use(express.json());
 app.use(cors()) 
 app.use("/", appRouter);
 

@@ -1,11 +1,5 @@
 const ProjectModel = require("../models/Projects");
-// async function get(req, res) {
-//   try {
-//     return res.status(200).send({ media: "ass" });
-//   } catch (err) {
-//     res.status(400).send(err);
-//   }
-// }
+
 async function get(req, res) {
   try {
     const step = req.query.step;
