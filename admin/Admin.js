@@ -25,9 +25,9 @@ const ADMIN = {
 const User = require("../models/User");
 const Post = require("../models/Post");
 const Project = require("../models/Projects");
-
+const Contact = require("../models/Contact");
 AdminBro.registerAdapter(mongooseAdminBro);
-const AdminBroOptions = { resources: [User, Post, Project] };
+const AdminBroOptions = { resources: [User, Post, Project, Contact] };
 
 const adminBro = new AdminBro(AdminBroOptions);
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
